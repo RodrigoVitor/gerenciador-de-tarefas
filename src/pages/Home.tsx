@@ -11,7 +11,18 @@ interface Task {
 }
 
 export default function Home () {
-    const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks") || []))
+    const [tasks, setTasks] = useState(() => {
+      const storedTasks = localStorage.getItem("tasks");
+      if (storedTasks) {
+        try {
+          return JSON.parse(storedTasks);
+        } catch (error) {
+          console.error("Erro ao parsear as tarefas", error);
+          return [];
+        }
+      }
+      return []
+    })
       //function to save a task
       function onClickAddTaskProp (title: string, description: string) {
         const newTasks = {

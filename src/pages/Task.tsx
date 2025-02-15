@@ -14,7 +14,8 @@ export default function Task() {
   const [task, setTask] = useState<TaskInterface[]>()
 
   useEffect(() => {
-      const newTask = JSON.parse(localStorage.getItem('tasks'))
+      const storedTasks  = localStorage.getItem('tasks')
+      const newTask = storedTasks ? JSON.parse(storedTasks) : [];
       setTask(newTask)
   }, [])
 
