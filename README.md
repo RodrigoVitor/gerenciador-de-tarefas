@@ -30,5 +30,5 @@ npm run dev
 ```
 ## Site no ar
 * Clique no link a seguir:
-<a href="https://organizatarefa.netlify.app/" target="_blank">Gerenciador de tarefas </a>
+[Gerenciador de tarefas](https://organizatarefa.netlify.app/)
 
