@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Gerenciador de tarefas
+Projeto desenolvido utilizando Reactjs e TailwindCss. 
+Foi utilizado nesse projeto:
+* React Router
+* useState
+* useParams
+* localStorage para amazernar as tarefas salvas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Instalação
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/RodrigoVitor/gerenciador-de-tarefas
+   ```
 
-Currently, two official plugins are available:
+2. Navegue para o diretório do projeto:
+   ```bash
+   cd gerenciador-de-tarefas
+   ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+## Uso
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Para iniciar o servidor, execute:
+```bash
+npm run dev
 ```
+## Site no ar
+* Clique no link a seguir:
+<a href="https://organizatarefa.netlify.app/" target="_blank">Gerenciador de tarefas </a>
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
